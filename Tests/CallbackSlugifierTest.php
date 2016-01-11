@@ -29,6 +29,11 @@ class CallbackSlugifierTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('this-is-slugified', $this->slugifier->slugify('this is slugified'));
     }
 
+    public function testLegacyInterface()
+    {
+        $this->assertInstanceOf('Symfony\Cmf\Bundle\CoreBundle\Slugifier\SlugifierInterface', $this->slugifier);
+    }
+
     public static function slugify($val)
     {
         return str_replace(' ', '-', $val);

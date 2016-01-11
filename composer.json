@@ -15,7 +15,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Symfony\\Cmf\\Api\\Slugifier\\": ""
+            "Symfony\\Cmf\\Api\\Slugifier\\": "",
+            "Symfony\\Cmf\\Bundle\\CoreBundle\\Slugifier\\": "CoreBundle"
         }
     },
     "extra": {
