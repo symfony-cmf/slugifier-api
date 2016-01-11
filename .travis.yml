@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+
+sudo: false
+
+before_install: phpenv config-rm xdebug.ini || true
+  
+install: composer dump-autoload
+
+script: phpunit
+
+notifications:
+  irc: "irc.freenode.org#symfony-cmf"

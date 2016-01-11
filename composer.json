@@ -1,0 +1,26 @@
+{
+    "name": "symfony-cmf/slugifier-api",
+    "description": "Provides a basic slugifier interface",
+    "keywords": ["slugify"],
+    "homepage": "http://cmf.symfony.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Symfony CMF Community",
+            "homepage": "https://github.com/symfony-cmf/RoutingBundle/contributors"
+        }
+    ],
+    "require": {
+        "php": "^5.3.9|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symfony\\Cmf\\Api\\Slugifier\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
