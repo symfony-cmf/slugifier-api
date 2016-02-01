@@ -22,7 +22,7 @@ class CallbackSlugifier extends ApiCallbackSlugifier
 {
     public function __construct($callback)
     {
-        trigger_error('The '.__CLASS__.' is deprecated as of version 1.0 and will be removed in 2.0. Use Symfony\Cmf\Api\Slugifier\CallbackSlugifier instead.', E_USER_DEPRECATED);
+        @trigger_error('The '.__CLASS__.' is deprecated as of version 1.0 and will be removed in 2.0. Use Symfony\Cmf\Api\Slugifier\CallbackSlugifier instead.', E_USER_DEPRECATED);
 
         parent::__construct($callback);
     }
