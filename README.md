@@ -10,10 +10,10 @@ and licensed under the [MIT License](LICENSE).
 A "slugifier" is a function which transforms a string `such as this` into a
 URL-friendly string `such-as-this`. Slugifiers are also known as "urlizers".
 
-This package does not contain a slugifier itself, but provides a standard
-interface to use for third party slugifiers.  Besides this, it comes with a
-useful `CallbackSlugifier` which is capable of handling most third party
-slugifiers.
+This package does not contain a slugifier implementation, it provides a
+standard interface (`SlugifierInterface`) for use by third party slugifiers
+and a `CallbackSlugifier` which is capable of wrapping most non-implementing
+third-party slugifiers to the `SlugifierInterface`.
 
 ## Requirements
 
@@ -65,6 +65,14 @@ See also:
 
 * [All Symfony CMF documentation](http://symfony.com/doc/master/cmf/index.html) - complete Symfony CMF reference
 * [Symfony CMF Website](http://cmf.symfony.com/) - introduction, live demo, support and community links
+
+## FIG Proposal
+
+We [proposed this to
+FIG](https://groups.google.com/forum/?fromgroups=#!topic/php-fig/J-6s9Wlyk-A)
+but unfortunately the proposal did not get enough interest. We would still be
+happy to contribute this to a PSR should the interest come up and deprecate
+this package in favor of the PSR one.
 
 ## Contributing
 
