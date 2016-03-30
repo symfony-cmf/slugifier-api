@@ -15,6 +15,8 @@ use Symfony\Cmf\Api\Slugifier\CallbackSlugifier as ApiCallbackSlugifier;
 
 /**
  * Slugifier service which uses a callback.
+ * 
+ * @deprecated Since 1.0, to be removed in 2.0. Use Symfony\Cmf\Api\Slugifier\CallbackSlugifier instead.
  *
  * @author Daniel Leech <daniel@dantleech.com>
  */
