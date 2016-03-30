@@ -12,7 +12,7 @@ URL-friendly string `such-as-this`. Slugifiers are also known as "urlizers".
 
 This package does not contain a slugifier implementation, it provides a
 standard interface (`SlugifierInterface`) for use by third party slugifiers
-and a `CallbackSlugifier` which is capable of wrapping most non-implementing
+and a `CallbackSlugifier` that is capable of wrapping most non-implementing
 third-party slugifiers to the `SlugifierInterface`.
 
 ## Requirements
@@ -49,9 +49,11 @@ class FooSubscriber
 
 You can then inject either a slugifier which already implements the CMF
 ``SlugifierInterface`` or you can use non-implementing libraries using the
-`CallbackSlugifier`. The
-[RoutingAutoBundle](https://github.com/symfony-cmf/RoutingAutoBundle) uses
-[aferrandini/urlizer](https://github.com/aferrandini/Urlizer) package:
+`CallbackSlugifier`. Using non-implementing libraries is very easy, assume
+you want to use the [`aferrandini/urlizer`](https://github.com/aferrandini/Urlizer)
+package (which is also used by the [RoutingAutoBundle](https://github.com/symfony-cmf/RoutingAutoBundle)),
+you can configure the `CallbackSlugifier` object to call the `Ferrandini\Urlizer::urlize()`
+method:
 
 ```php
 $slugifier = new CallbackSlugifier('Ferrandini\Urlizer::urlize');
@@ -68,8 +70,7 @@ See also:
 
 ## FIG Proposal
 
-We [proposed this to
-FIG](https://groups.google.com/forum/?fromgroups=#!topic/php-fig/J-6s9Wlyk-A)
+We [proposed this to FIG](https://groups.google.com/forum/?fromgroups=#!topic/php-fig/J-6s9Wlyk-A)
 but unfortunately the proposal did not get enough interest. We would still be
 happy to contribute this to a PSR should the interest come up and deprecate
 this package in favor of the PSR one.
