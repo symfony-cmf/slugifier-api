@@ -1,13 +1,13 @@
 {
     "name": "symfony-cmf/slugifier-api",
-    "description": "Provides a basic slugifier interface",
-    "keywords": ["slugify"],
+    "description": "Provides a basic slugifier interface to transform text into strings suitable for URLs",
+    "keywords": ["slugify", "urlize"],
     "homepage": "http://cmf.symfony.com",
     "license": "MIT",
     "authors": [
         {
             "name": "Symfony CMF Community",
-            "homepage": "https://github.com/symfony-cmf/RoutingBundle/contributors"
+            "homepage": "https://github.com/symfony-cmf/slugifier-api/contributors"
         }
     ],
     "require": {
