@@ -11,17 +11,17 @@
         }
     ],
     "require": {
-        "php": "^5.3.9|^7.0"
+        "php": "^5.5.9|^7.0"
     },
     "autoload": {
-        "psr-4": {
-            "Symfony\\Cmf\\Api\\Slugifier\\": "",
-            "Symfony\\Cmf\\Bundle\\CoreBundle\\Slugifier\\": "CoreBundle"
-        }
+        "psr-4": { "Symfony\\Cmf\\Api\\Slugifier\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Symfony\\Cmf\\Api\\Slugifier\\Tests\\": "tests/" }
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "2.0-dev"
         }
     }
 }

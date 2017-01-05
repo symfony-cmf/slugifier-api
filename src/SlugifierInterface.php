@@ -16,6 +16,14 @@ namespace Symfony\Cmf\Api\Slugifier;
  *
  * @author Daniel Leech <daniel@dantleech.com>
  */
-interface SlugifierInterface extends \Symfony\Cmf\Bundle\CoreBundle\Slugifier\SlugifierInterface
+interface SlugifierInterface
 {
+    /**
+     * Return a slugified (or urlized) representation of a given string.
+     *
+     * @param string $string
+     *
+     * @return string
+     */
+    public function slugify($string);
 }
