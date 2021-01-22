@@ -11,24 +11,27 @@
 
 namespace Symfony\Cmf\Api\Slugifier\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Symfony\Cmf\Api\Slugifier\CallbackSlugifier;
 
-class CallbackSlugifierTest extends \PHPUnit_Framework_TestCase
+class CallbackSlugifierTest extends TestCase
 {
-    private $slugifier;
-
-    protected function setUp()
-    {
-        $this->slugifier = new CallbackSlugifier(__CLASS__.'::slugify');
-    }
-
     public function testSlugify()
     {
-        $this->assertEquals('this-is-slugified', $this->slugifier->slugify('this is slugified'));
+        $slugifier = $this->createCallbackSlugifier();
+        $this->assertEquals('this-is-slugified', $slugifier->slugify('this is slugified'));
     }
 
     public static function slugify($val)
     {
         return str_replace(' ', '-', $val);
+    }
+
+    /**
+     * @return CallbackSlugifier
+     */
+    private function createCallbackSlugifier()
+    {
+        return new CallbackSlugifier(__CLASS__.'::slugify');
     }
 }
